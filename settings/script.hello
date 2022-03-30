@@ -165,18 +165,22 @@ mv Lector.app "${uzip}"/Applications
 # Sticky Notes.app
 # TODO: Resurrect it based on the latest version
 # Requires: py37-qt5-dbus
-# git clone https://gitlab.com/william.belanger/qtpad
-# ( cd qtpad ; git checkout b7a7764d )
-# rm -rf qtpad/screenshots
-# mv qtpad/qtpad qtpad/Resources
-# mv qtpad/* qtpad/Resources 2>/dev/null || true
-# rm -rf qtpad/.git
-# ( cd qtpad ; ln -s Resources/__init__.py "Sticky Notes" )
-# sed -i -e 's|/usr/bin/python3|/usr/bin/env python3|g' qtpad/Resources/__init__.py
-# rm qtpad/Resources/__init__.py-e
-# cp qtpad/Resources/icons/qtpad.svg "qtpad/Resources/Sticky Notes.svg"
-# rsvg-convert -a -w 256 -h 256 "qtpad/Resources/Sticky Notes.svg" -o "qtpad/Resources/Sticky Notes.png"
-# mv qtpad/ "Sticky Notes.app"
+##START WMAT01-EDIT
+##git clone https://gitlab.com/william.belanger/qtpad
+# git clone https://gitlab.com/william.belanger/primenote
+##substitute qtpad for primenote below:
+# ( cd primenote ; git checkout b7a7764d )
+# rm -rf primenote/screenshots
+# mv primenote/primenote primenote/Resources
+# mv primenote/* primenote/Resources 2>/dev/null || true
+# rm -rf primenote/.git
+# ( cd primenote ; ln -s Resources/__init__.py "Sticky Notes" )
+# sed -i -e 's|/usr/bin/python3|/usr/bin/env python3|g' primenote/Resources/__init__.py
+# rm primenote/Resources/__init__.py-e
+# cp primenote/Resources/icons/primenote.svg "primenote/Resources/Sticky Notes.svg"
+# rsvg-convert -a -w 256 -h 256 "primenote/Resources/Sticky Notes.svg" -o "primenote/Resources/Sticky Notes.png"
+# mv primenote/ "Sticky Notes.app"
+##END WMAT01-EDIT
 # mv "Sticky Notes.app" "${uzip}"/Applications/Utilities
 
 # QHexEdit
